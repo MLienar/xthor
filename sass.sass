@@ -17,6 +17,7 @@ body
   font-family: 'Rubik'
   font-size: clamp(100%, 1rem + 2vw, 24px)
   color: $navy
+  overflow-x: hidden
 
 h1
   font-size: clamp(1em, 1rem + 2vw, 3em)
@@ -105,7 +106,7 @@ header
 
 // Double screenshot section
 .waves
-  padding-top: 10vh
+  padding: 20vh 0 10vh 0
   display: flex
   flex-flow: row nowrap
   justify-content: flex-start
@@ -155,7 +156,7 @@ header
 
   .calm-text
     text-align: center
-    margin: 2vh auto 0
+    margin: 5vh auto 5vh
     width: 70%
     p
       margin: 2vh auto 5vh
@@ -175,9 +176,9 @@ header
   flex-flow: row nowrap
   justify-content: flex-end
   align-items: center
-  margin-top: 10vh
+  margin-top: 20vh
   position: relative
-  margin-bottom: 10vh
+  margin-bottom: 20vh
   .speculation-text
     margin: 0 10vw
     width: clamp(500px, 40vw, 700px)
@@ -260,7 +261,7 @@ header
 
 // Whitepaper section
 .whitepaper
-  margin: 10vh 0
+  margin: 15vh 0
   display: flex
   flex-flow: row nowrap
   justify-content: center
@@ -271,6 +272,7 @@ header
     width: 30vw
     justify-content: space-between
     align-items: flex-start
+    margin-right: 2vw
     a
       display: flex
       flex-flow: row nowrap
@@ -287,9 +289,11 @@ header
 
   .whitepaper-text
     width: clamp(300px, 30vw, 700px)
+    margin-left: 2vh
 
 // Footer
 footer
+  margin-top: 10vh
   display: flex
   flex-flow: row nowrap
   justify-content: space-between
@@ -310,3 +314,115 @@ footer
   .footer-logos
     a
       margin: 0 2.5vh
+    img
+      height: 4vh
+
+// Responsive
+
+@media screen and (max-width: 1000px)
+  .splash-screen
+    min-height: 40vh
+    -webkit-clip-path: ellipse(110% 75% at 51% 24%)
+    clip-path: ellipse(110% 75% at 51% 24%)
+
+@media screen and (max-width: 750px)
+  header
+    justify-content: center
+
+  .header-links
+    display: none
+
+  .splash-screen
+    flex-flow: column nowrap
+    padding: unset
+    .splash-text
+      width: 80vw
+      text-align: center
+      align-self: center
+      align-items: center
+      margin-bottom: 5vh
+      a
+        padding: 2vh 10vw
+    .splash-img
+      width: 80vw
+      display: flex
+      align-items: center
+      justify-content: center
+  .waves
+    flex-flow: column nowrap
+    align-items: flex-start
+    .double-screen
+      width: 80vw
+      margin-bottom: 15vh
+      .small-screenshot
+        border-radius: 10px
+    .waves-text
+      width: 80vw
+      margin: auto
+      h2
+        width: 100%
+        align-self: center
+      p
+        width: 100%
+  .calm
+    -webkit-clip-path: ellipse(171% 43% at 50% 50%)
+    clip-path: ellipse(171% 43% at 50% 50%)
+    padding: 15vh 0 0 0
+    .calm-text
+      margin: auto
+      width: 80vw
+      p
+        width: 100%
+
+  .speculation
+    flex-flow: column
+    .speculation-text
+      width: 80vw
+      margin-bottom: 10vh
+    .speculation-image
+      width: 70vw
+      height: 70vw
+      .rotating-logo
+        height: 100%
+        width: 100%
+      #logo2
+        right: -10vw
+      #logo3
+        right: -20vw
+
+  .social
+    padding: 25vh 0
+    -webkit-clip-path: ellipse(171% 43% at 50% 50%)
+    clip-path: ellipse(171% 43% at 50% 50%)
+    flex-flow: column-reverse nowrap
+    .social-buttons a img
+      margin-right: 7vw
+    .social-text
+      width: 80vw
+      p
+        width: 100%
+        margin-bottom: 5vh
+
+  .whitepaper
+    margin: 5vh 0
+    flex-flow: column nowrap
+    .cta
+      width: 80vw
+      margin-bottom: 5vh
+      a
+        padding: 2vh 10vw
+        img
+          height: 2vh
+          margin-right: 3vw
+    .whitepaper-text
+      margin: 0
+      width: 80vw
+
+  footer
+    flex-flow: column nowrap
+    .footer-logo
+      height: 10vh
+      img
+        height: 70%
+    .footer-links
+      margin: 5vh 0

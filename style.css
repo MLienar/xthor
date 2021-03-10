@@ -14,6 +14,7 @@ body {
   font-family: "Rubik";
   font-size: clamp(100%, 1rem + 2vw, 24px);
   color: #092d72;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -112,7 +113,7 @@ header .header-links a {
 }
 
 .waves {
-  padding-top: 10vh;
+  padding: 20vh 0 10vh 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -167,7 +168,7 @@ header .header-links a {
 }
 .calm .calm-text {
   text-align: center;
-  margin: 2vh auto 0;
+  margin: 5vh auto 5vh;
   width: 70%;
 }
 .calm .calm-text p {
@@ -190,9 +191,9 @@ header .header-links a {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 10vh;
+  margin-top: 20vh;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 20vh;
 }
 .speculation .speculation-text {
   margin: 0 10vw;
@@ -291,7 +292,7 @@ header .header-links a {
 }
 
 .whitepaper {
-  margin: 10vh 0;
+  margin: 15vh 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -303,6 +304,7 @@ header .header-links a {
   width: 30vw;
   justify-content: space-between;
   align-items: flex-start;
+  margin-right: 2vw;
 }
 .whitepaper .cta a {
   display: flex;
@@ -321,9 +323,11 @@ header .header-links a {
 }
 .whitepaper .whitepaper-text {
   width: clamp(300px, 30vw, 700px);
+  margin-left: 2vh;
 }
 
 footer {
+  margin-top: 10vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -346,6 +350,155 @@ footer .footer-links a {
 }
 footer .footer-logos a {
   margin: 0 2.5vh;
+}
+footer .footer-logos img {
+  height: 4vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .splash-screen {
+    min-height: 40vh;
+    -webkit-clip-path: ellipse(110% 75% at 51% 24%);
+    clip-path: ellipse(110% 75% at 51% 24%);
+  }
+}
+@media screen and (max-width: 750px) {
+  header {
+    justify-content: center;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .splash-screen {
+    flex-flow: column nowrap;
+    padding: unset;
+  }
+  .splash-screen .splash-text {
+    width: 80vw;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+  .splash-screen .splash-text a {
+    padding: 2vh 10vw;
+  }
+  .splash-screen .splash-img {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .waves {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+  .waves .double-screen {
+    width: 80vw;
+    margin-bottom: 15vh;
+  }
+  .waves .double-screen .small-screenshot {
+    border-radius: 10px;
+  }
+  .waves .waves-text {
+    width: 80vw;
+    margin: auto;
+  }
+  .waves .waves-text h2 {
+    width: 100%;
+    align-self: center;
+  }
+  .waves .waves-text p {
+    width: 100%;
+  }
+
+  .calm {
+    -webkit-clip-path: ellipse(171% 43% at 50% 50%);
+    clip-path: ellipse(171% 43% at 50% 50%);
+    padding: 15vh 0 0 0;
+  }
+  .calm .calm-text {
+    margin: auto;
+    width: 80vw;
+  }
+  .calm .calm-text p {
+    width: 100%;
+  }
+
+  .speculation {
+    flex-flow: column;
+  }
+  .speculation .speculation-text {
+    width: 80vw;
+    margin-bottom: 10vh;
+  }
+  .speculation .speculation-image {
+    width: 70vw;
+    height: 70vw;
+  }
+  .speculation .speculation-image .rotating-logo {
+    height: 100%;
+    width: 100%;
+  }
+  .speculation .speculation-image #logo2 {
+    right: -10vw;
+  }
+  .speculation .speculation-image #logo3 {
+    right: -20vw;
+  }
+
+  .social {
+    padding: 25vh 0;
+    -webkit-clip-path: ellipse(171% 43% at 50% 50%);
+    clip-path: ellipse(171% 43% at 50% 50%);
+    flex-flow: column-reverse nowrap;
+  }
+  .social .social-buttons a img {
+    margin-right: 7vw;
+  }
+  .social .social-text {
+    width: 80vw;
+  }
+  .social .social-text p {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+
+  .whitepaper {
+    margin: 5vh 0;
+    flex-flow: column nowrap;
+  }
+  .whitepaper .cta {
+    width: 80vw;
+    margin-bottom: 5vh;
+  }
+  .whitepaper .cta a {
+    padding: 2vh 10vw;
+  }
+  .whitepaper .cta a img {
+    height: 2vh;
+    margin-right: 3vw;
+  }
+  .whitepaper .whitepaper-text {
+    margin: 0;
+    width: 80vw;
+  }
+
+  footer {
+    flex-flow: column nowrap;
+  }
+  footer .footer-logo {
+    height: 10vh;
+  }
+  footer .footer-logo img {
+    height: 70%;
+  }
+  footer .footer-links {
+    margin: 5vh 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
