@@ -55,6 +55,7 @@ header
     font-size: clamp(0.5em, 1rem + 0.2vw, 1.5em)
     img
       height: 35%
+      width: auto
     h3
       margin-left: 2vw
       color: $navy
@@ -171,6 +172,7 @@ header
     align-items: center
     img
       width: 100%
+      height: auto
 
 // Speculation section
 .speculation
@@ -336,7 +338,7 @@ footer
 
   .splash-screen
     flex-flow: column nowrap
-    padding-top: 10vh
+    padding: 10vh 0 0 0
     .splash-text
       width: 80vw
       text-align: center
@@ -375,7 +377,9 @@ footer
       width: 80vw
       p
         width: 100%
-
+    .calm-image
+      margin-top: 5vh
+      max-width: 95vw
   .speculation
     flex-flow: column
     .speculation-text
@@ -426,5 +430,6 @@ footer
       height: 10vh
       img
         height: 70%
+        width: auto
     .footer-links
       margin: 5vh 0

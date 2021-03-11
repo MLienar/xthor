@@ -58,6 +58,7 @@ header .header-logo {
 }
 header .header-logo img {
   height: 35%;
+  width: auto;
 }
 header .header-logo h3 {
   margin-left: 2vw;
@@ -186,6 +187,7 @@ header .header-links a {
 }
 .calm .calm-image img {
   width: 100%;
+  height: auto;
 }
 
 .speculation {
@@ -375,7 +377,7 @@ footer .footer-logos img {
 
   .splash-screen {
     flex-flow: column nowrap;
-    padding-top: 10vh;
+    padding: 10vh 0 0 0;
   }
   .splash-screen .splash-text {
     width: 80vw;
@@ -428,6 +430,10 @@ footer .footer-logos img {
   }
   .calm .calm-text p {
     width: 100%;
+  }
+  .calm .calm-image {
+    margin-top: 5vh;
+    max-width: 95vw;
   }
 
   .speculation {
@@ -497,6 +503,7 @@ footer .footer-logos img {
   }
   footer .footer-logo img {
     height: 70%;
+    width: auto;
   }
   footer .footer-links {
     margin: 5vh 0;
