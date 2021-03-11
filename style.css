@@ -375,7 +375,7 @@ footer .footer-logos img {
 
   .splash-screen {
     flex-flow: column nowrap;
-    padding: unset;
+    padding-top: 10vh;
   }
   .splash-screen .splash-text {
     width: 80vw;
